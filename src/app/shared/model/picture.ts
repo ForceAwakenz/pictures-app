@@ -16,7 +16,7 @@ export type ImageDataType = {
 export type ApiPictureType = {
 	id: string;
 	title: string;
-	create_datetime: string;
+	import_datetime: string;
 	images: {
 		original: ImageDataType;
 		preview_gif: ImageDataType;
@@ -32,13 +32,13 @@ export class Picture implements PictureType {
 	date: Date;
 	extraProperties: Record<string, unknown>;
 
-	constructor({ id, title, create_datetime, images, ...rest }: ApiPictureType) {
+	constructor({ id, title, import_datetime, images, ...rest }: ApiPictureType) {
 		this.id = id;
 		this.imageURL = images.original.url;
 		this.imageData = { ...images.original };
 		this.placeholderURL = images.preview_gif.url;
 		this.title = title;
-		this.date = new Date(create_datetime);
+		this.date = new Date(import_datetime);
 		this.extraProperties = rest;
 	}
 

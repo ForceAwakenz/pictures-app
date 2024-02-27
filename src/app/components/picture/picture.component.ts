@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Picture } from '@src/app/shared/model/picture';
-import { NgOptimizedImage } from '@angular/common';
+import { DatePipe, NgOptimizedImage } from '@angular/common';
 import { LoadNotificatorDirective } from '@src/app/shared/directives/load-notificator.directive';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
@@ -11,6 +11,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 		NgOptimizedImage,
 		LoadNotificatorDirective,
 		MatProgressSpinnerModule,
+		DatePipe,
 	],
 	templateUrl: './picture.component.html',
 	styleUrl: './picture.component.scss',
