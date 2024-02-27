@@ -13,7 +13,7 @@ export class GiphyApiService {
 
 	getSeachedPictures(
 		searchPhraze: string,
-		limit = 15
+		limit = 20
 	): Observable<ApiPictureType[]> {
 		const params = new HttpParams().set('q', searchPhraze).set('limit', limit);
 
@@ -22,7 +22,7 @@ export class GiphyApiService {
 			.pipe(map(resp => resp.data));
 	}
 
-	getTrendingPictures(limit = 15): Observable<ApiPictureType[]> {
+	getTrendingPictures(limit = 20): Observable<ApiPictureType[]> {
 		const params = new HttpParams().set('limit', limit);
 
 		return this.http
