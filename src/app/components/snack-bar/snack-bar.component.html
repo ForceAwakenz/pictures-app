@@ -1,0 +1,11 @@
+<span matSnackBarLabel>{{ data.message }}</span>
+<span matSnackBarActions>
+	<button
+		mat-raised-button
+		[color]="data.buttonColor"
+		matSnackBarAction
+		(click)="snackBarRef.dismissWithAction()"
+	>
+		Ok
+	</button>
+</span>
