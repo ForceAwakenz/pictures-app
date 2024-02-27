@@ -1,1 +1,15 @@
-{{ picture.title }}
+<img
+	[ngSrc]="picture.imageURL"
+	alt="Image"
+	[width]="picture.imageData.width"
+	[height]="picture.imageData.height"
+	priority
+	class="main-image"
+	picLoadNotificator
+	(picLoaded)="onLoad()"
+	[style.display]="loadComplete ? 'block' : 'none'"
+/>
+
+@if (!loadComplete) {
+	<mat-spinner class="spinner" diameter="60"></mat-spinner>
+}

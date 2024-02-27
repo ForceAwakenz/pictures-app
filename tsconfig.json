@@ -9,7 +9,6 @@
 		"noPropertyAccessFromIndexSignature": true,
 		"noImplicitReturns": true,
 		"noImplicitAny": true,
-		"noUnusedLocals": true,
 		"allowUnreachableCode": false,
 		"strictFunctionTypes": true,
 		"strictNullChecks": true,
