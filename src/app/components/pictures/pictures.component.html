@@ -1,3 +1,5 @@
-@for (picture of pictures; track $index) {
+@for (picture of pictures; track picture.id) {
 	<pic-picture [picture]="picture" />
+} @empty {
+	<p class="no-pictures">No pictures found</p>
 }

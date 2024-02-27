@@ -1,6 +1,6 @@
 import { HttpInterceptorFn, HttpParams } from '@angular/common/http';
-import { VERSION } from '@angular/core';
 import { environment } from '@src/environments/environment.development';
+import { VERSION } from '../constants/paths.constant';
 
 export const apiInterceptor: HttpInterceptorFn = (req, next) => {
 	const params = (req.params ?? new HttpParams())

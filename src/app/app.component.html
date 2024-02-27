@@ -1,2 +1,4 @@
-<pic-header />
-<pic-pictures />
+<pic-header (filterChanged)="onFilterChanged($event)" />
+@if (pictures | async; as pictures) {
+	<pic-pictures [pictures]="pictures" />
+}
