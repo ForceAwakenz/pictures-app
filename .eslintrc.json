@@ -70,7 +70,6 @@
 				],
 				"prefer-arrow-callback": "error",
 				"prefer-const": "error",
-				"object-property-newline": "error",
 				"no-console": ["warn", { "allow": ["warn", "error"] }],
 				"no-nested-ternary": "error",
 				"indent": ["error", "tab"]
